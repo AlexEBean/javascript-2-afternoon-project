@@ -165,7 +165,7 @@ function finder (array) {
       return true
     } else {
       return false
-    }
+    } 
   }
 }
 
