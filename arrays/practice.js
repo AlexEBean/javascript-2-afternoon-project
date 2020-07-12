@@ -36,7 +36,7 @@ var arr = [40,50,60];
 
 //Code Here
 function last (arr){
-  return arr[2]
+  return arr[arr.length - 1]
 }
 
 
@@ -165,7 +165,7 @@ function finder (array) {
       return true
     } else {
       return false
-    } 
+    }
   }
 }
 

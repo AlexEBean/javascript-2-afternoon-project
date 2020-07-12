@@ -19,7 +19,7 @@ let me = {
   name: "Alex",
   age: 25
 }
-alert(me)
+alert.me
 
 ////////// PROBLEM 2 //////////
 
@@ -146,6 +146,7 @@ methodCollection.logHello = function () {
 */
 
 //Code Here
+methodCollection.collection ()
 
 ////////// PROBLEM 6 //////////
 
