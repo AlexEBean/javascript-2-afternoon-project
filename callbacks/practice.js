@@ -38,7 +38,7 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
   console.log('The first name in names is ' + firstName);
   return firstName;
-});
+}); 
 // Do not edit the code above.
 
 

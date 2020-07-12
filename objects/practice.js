@@ -134,6 +134,12 @@ const methodCollection = {
 
 //Code Here
 
+methodCollection.alertHello = function () {
+  alert("hello")
+}
+methodCollection.logHello = function () {
+  console.log("hello")
+}
 
 /*
   Now call your alertHello and logHello methods.
