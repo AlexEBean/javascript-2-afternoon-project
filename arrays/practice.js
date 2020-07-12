@@ -163,7 +163,7 @@ function finder (array) {
   for (let i = 0; i < array.length; i++){
     if (array[i] === randomNumber){
       return true
-    } else {
+  } else {
       return false
     }
   }
