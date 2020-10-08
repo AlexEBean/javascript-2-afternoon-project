@@ -19,7 +19,8 @@ let me = {
   name: "Alex",
   age: 25
 }
-alert.me
+
+// alert(me.name)
 
 ////////// PROBLEM 2 //////////
 
@@ -29,8 +30,8 @@ alert.me
 */
 
 //Code here
-const favoriteThings = {
-  band: "I do not have one",
+let favoriteThings = {
+  band: "Imagine Dragons",
   food: "Ice Cream",
   person: "Abraham Lincoln",
   book: "Norse Mythology",
@@ -67,19 +68,20 @@ favoriteThings.book = "Harry Potter"
 */
 
 //Code here
-const backPack = {
+let backPack = {
 
 }
+
 let item = "firstPocket"
-backPack["firstPocket"] = "chapstick";
-backPack.color = "green";
+backPack[item] = "chapstick"
+backPack.color = "green"
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-alert(backPack)
+// alert(backPack)
 
 /*
 You probably noticed that it just alerted [object Object].
@@ -123,7 +125,7 @@ user2.email = "bryan.smith@devmounta.in"
 */
 
 //Code Here
-const methodCollection = {
+let methodCollection = {
 
 }
 
@@ -133,7 +135,6 @@ const methodCollection = {
 */
 
 //Code Here
-
 methodCollection.alertHello = function () {
   alert("hello")
 }
@@ -146,7 +147,8 @@ methodCollection.logHello = function () {
 */
 
 //Code Here
-methodCollection.collection ()
+// methodCollection.alertHello()
+methodCollection.logHello()
 
 ////////// PROBLEM 6 //////////
 
@@ -156,15 +158,14 @@ methodCollection.collection ()
 */
 
 //Code Here
-function makePerson (name, birthday, ssn) {
-  const newObject = {
+function makePerson (name, birthday, ssn,) {
+  let newObject = {
     name: name,
     birthday: birthday,
     ssn: ssn
   }
-  return (newObject)
+  return newObject
 }
-
 
 ////////// PROBLEM 7 //////////
 
@@ -175,10 +176,10 @@ function makePerson (name, birthday, ssn) {
 
 //Code Here
 function makeCard (cardNumber, expirationDate, securityCode) {
-  const newCard = {
+  let newCreditCard = {
     cardNumber: cardNumber,
     expirationDate: expirationDate,
     securityCode: securityCode
   }
-  return (newCard)
+  return newCreditCard
 }

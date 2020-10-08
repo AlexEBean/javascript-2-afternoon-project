@@ -2,7 +2,6 @@
   Once you complete a problem, refresh ./SpecRunner.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
-
   You can refresh the page at any time to re-run all the tests.
 */
 
@@ -18,8 +17,8 @@ var arr = [10,20,30];
 */
 
 //Code Here
-function first(arr){
-  return arr[0];
+function first (arr) {
+  return arr[0]
 }
 
 
@@ -35,7 +34,7 @@ var arr = [40,50,60];
 */
 
 //Code Here
-function last (arr){
+function last (arr) {
   return arr[arr.length - 1]
 }
 
@@ -52,7 +51,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-function looper (family){
+function looper (family) {
   for (let i = 0; i < family.length; i++){
     alert(family[i])
   }
@@ -71,9 +70,10 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-function reversedLooper (letters){
-  for (let i= letters.length - 1; i >= 0; i--)
+function reversedLooper(letters){
+  for (let i = letters.length - 1; i >= 0; i--){
     alert(letters[i])
+  }
 }
 
 
@@ -89,15 +89,17 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-function evenFinder (nums){
+
+function evenFinder(nums) {
   let evens = []
   for (let i = 0; i < nums.length; i++){
     if (nums[i] % 2 === 0) {
-      evens.push(nums[i]);
+      evens.push(nums[i])
     }
   }
   return evens
 }
+
 
 
 
@@ -124,18 +126,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-function divider (numbersArray){
-const evensArray = []
-const oddsArray = []
-for (let i = 0; i < numbersArray.length; i++) {
-  if (numbersArray[i] % 2 === 0) {
-    evensArray.push(numbersArray[i])
-  } else {
-    oddsArray.push(numbersArray[i])
+function divider (numbersArray) {
+  let evens = []
+  let odds = []
+  for (let i = 0; i < numbersArray.length; i++){
+    if (numbersArray[i] % 2 === 0) {
+      evens.push(numbersArray[i])
+    } else {
+      odds.push(numbersArray[i])
+    }
   }
-
-}
-  return [evensArray, oddsArray]
+  return [evens, odds]
 }
 
 
@@ -158,16 +159,16 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
-function finder (array) {
-  const randomNumber = getRandomArbitrary ()
-  for (let i = 0; i < array.length; i++){
-    if (array[i] === randomNumber){
-      return true
-  } else {
-      return false
+function finder (arr) {
+  let randomNumber = getRandomArbitrary()
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === randomNumber) {
+      return true 
     }
   }
+      return false
 }
+
 
 ////////// PROBLEM 8 //////////
 
@@ -177,16 +178,12 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 /*
   Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
-
   Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
   If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
-
   Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
   In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
-
   In both removeItem and addItem check to see if the 'myGroceryList' and 'item' arguments are truthy.
   If they are not, return an empty array.
-
   Here are some examples of calling your functions and what should be returned:
   removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
@@ -195,28 +192,28 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-function removeItem (myGroceryList, item){
+function removeItem (myGroceryList, item) {
   if (item) {
     for (let i = 0; i < myGroceryList.length; i++) {
-      if (myGroceryList[i] === item){
+      if (myGroceryList[i] === item) {
         myGroceryList.splice(i,1)
-      } 
+      }
     }
-  } else if (!item) {
-      return myGroceryList = []
-  }   
+} else if (!item) {
+    myGroceryList = []
+  }
   return myGroceryList
 }
-  
 
-function addItem (myGroceryList, item){
+function addItem (myGroceryList, item) {
   if (item) {
     myGroceryList.push(item)
   } else if (!item) {
-    return myGroceryList = []
-  }   
+    myGroceryList = []
+  }  
   return myGroceryList
 }
+
 
 ////////// PROBLEM 9 //////////
 
@@ -225,12 +222,12 @@ function addItem (myGroceryList, item){
 */
 
 //Code Here
-function maker (array) {
-  let myArray = []
-  for (let i = 0; i < 215; i++){
-    myArray[i] = i + 1
+function maker () {
+  newArray = []
+  for (i = 0; i < 215; i++){
+    newArray.push(i+1)
   }
-  return myArray
+  return newArray
 }
 
 
@@ -248,13 +245,23 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 function addTen (numbers) {
-  let newArray = []
-  for (let i = 0; i < numbers.length; i++){
-    newArray.push(Number(numbers[i]))
-    newArray[i] += 10
-  }
-    return newArray
+let newArray = []
+for (i = 0; i < numbers.length; i++){
+  newArray.push(parseInt(numbers[i]) + 10)
 }
+  return newArray
+}
+
+
+// Also works
+
+// function addTen (numbers) {
+//   let newArray = []
+//   for (i = 0; i < numbers.length; i++){
+//     newArray.push(Number(numbers[i]) + 10)
+//   }
+//     return newArray
+//   }
 
 
 ////////// PROBLEM 11 //////////
@@ -280,7 +287,7 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 function longer (arr1, arr2) {
-  if (arr1 > arr2) {
+  if (arr1.length > arr2.length) {
     return arr1
   } else {
     return arr2
@@ -292,15 +299,14 @@ function longer (arr1, arr2) {
   As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
   'both' should return a new array with the matching numbers found in both arr1 and arr2.
-
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
 //Code Here
 function both (arr1, arr2) {
   let newArray = []
-  for (let i = 0; i < arr1.length; i++) {
-    for (let j = 0 ; j < arr2.length; j++){
+  for (i = 0; i < arr1.length; i++) {
+    for (j = 0; j < arr2.length; j++) {
       if (arr1[i] === arr2[j]) {
         newArray.push(arr1[i])
       }
@@ -358,10 +364,11 @@ console.log(devMountainEmployees.length)
 
 //Code Here
 for (let i = 0; i < devMountainEmployees.length; i++) {
-  if (devMountainEmployees[i].name === "Cahlan") {
-     devMountainEmployees.splice(i,1)
-  } 
+  if (devMountainEmployees[i].name === "Cahlan"){
+    devMountainEmployees.splice(i,1)
+  }
 }
+
 
 ////////// PROBLEM 13 //////////
 
@@ -377,7 +384,6 @@ let users = []
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties: name, email, password, username.
-
   Include the following user1 object as one of the objects in your array.
   
   MAKE SURE TO DO THIS IN THE SECTION BELOW WHERE USER1 IS DECLARED
@@ -396,35 +402,32 @@ var user1 = {
 let user2 = {
   name: "Jojo",
   email: "stardustcrusaders@gmail.com",
-  password: "marine biology is amazing!",
+  password: "Marine biology is amazing!",
   username: "*Platinum3"
 }
 
 let user3 = {
   name: "Brando",
   email: "phantomBl@gmail.com",
-  password: "You thought it was, but it was me",
+  password: "You thought it was him, but it was me",
   username: "TheWorld1"
 }
 
-users.push(user1)
-users.push(user2)
-users.push(user3)
+users.push(user1, user2, user3)
 
 
 /*
   Now you have a very common data structure. 
   Twitter is a good use case.
   It's easy to imagine that your followers list on Twitter is an array full of objects and those objects contain properties about the specific person you follow.
-
   Now let's say that Mark decided to delete his account.
   Loop through your array of objects until you find Mark's account (use his email, mark.mciver@devmounta.in, to find him).
   Once you find the array index he's located in, delete him from the array.
 */
 
 //Code Here
-for (let i = 0; i < users.length; i++){
-  if (users[i].email == "mark.mciver@devmounta.in"){
+for (let i = 0; i < users.length; i++) {
+  if (users[i].email === "mark.mciver@devmounta.in"){
     users.splice(i,1)
   }
 }
